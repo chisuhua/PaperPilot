@@ -5,6 +5,8 @@ Streamlit 用户界面
 import streamlit as st
 import tempfile
 import os
+import uuid
+import shutil
 from pdf_processor import PDFProcessor
 from search_engine import SemanticSearchEngine
 
@@ -48,18 +50,20 @@ def main():
                     # 清空之前的数据
                     st.session_state.processor = PDFProcessor()
                     
-                    # 保存上传的文件到临时目录并处理
-                    temp_dir = tempfile.mkdtemp()
-                    pdf_paths = []
-                    
-                    for uploaded_file in uploaded_files:
-                        temp_path = os.path.join(temp_dir, uploaded_file.name)
-                        with open(temp_path, 'wb') as f:
-                            f.write(uploaded_file.getbuffer())
-                        pdf_paths.append(temp_path)
-                    
-                    # 处理 PDF
-                    results = st.session_state.processor.process_multiple_pdfs(pdf_paths)
+                    # 使用临时目录上下文管理器，自动清理
+                    with tempfile.TemporaryDirectory() as temp_dir:
+                        pdf_paths = []
+                        
+                        for uploaded_file in uploaded_files:
+                            # 使用 UUID 避免文件名冲突
+                            unique_filename = f"{uuid.uuid4().hex}_{uploaded_file.name}"
+                            temp_path = os.path.join(temp_dir, unique_filename)
+                            with open(temp_path, 'wb') as f:
+                                f.write(uploaded_file.getbuffer())
+                            pdf_paths.append(temp_path)
+                        
+                        # 处理 PDF
+                        results = st.session_state.processor.process_multiple_pdfs(pdf_paths)
                     
                     # 统计信息
                     total_paragraphs = sum(len(doc['paragraphs']) for doc in results)
@@ -82,8 +86,8 @@ def main():
         if st.session_state.processor.documents:
             st.markdown("---")
             st.subheader("已加载的文档")
-            for filename in st.session_state.processor.documents.keys():
-                st.text(f"📄 {filename}")
+            for doc_info in st.session_state.processor.documents.values():
+                st.text(f"📄 {doc_info['filename']}")
     
     # 主界面 - 搜索
     if st.session_state.indexed:

@@ -3,8 +3,6 @@ PaperPilot - PDF 论文智能搜索系统（演示版本）
 Streamlit 用户界面 - 不需要完整依赖的演示版
 """
 import streamlit as st
-import tempfile
-import os
 
 # 页面配置
 st.set_page_config(

@@ -29,7 +29,10 @@ class PDFProcessor:
                 pdf_reader = PyPDF2.PdfReader(file)
                 text = ""
                 for page in pdf_reader.pages:
-                    text += page.extract_text() + "\n"
+                    page_text = page.extract_text()
+                    if page_text is None:
+                        continue
+                    text += page_text + "\n"
                 return text
         except Exception as e:
             print(f"Error reading PDF {pdf_path}: {e}")
@@ -82,7 +85,8 @@ class PDFProcessor:
             'paragraphs': paragraphs
         }
         
-        self.documents[filename] = doc_info
+        # Use full path as key to avoid collisions
+        self.documents[pdf_path] = doc_info
         return doc_info
     
     def process_multiple_pdfs(self, pdf_paths: List[str]) -> List[Dict[str, Any]]:
