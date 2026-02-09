@@ -2,6 +2,14 @@
 
 一个基于自然语言处理的 PDF 论文智能搜索系统，支持使用自然语言查询本地 PDF 文档内容。
 
+## 界面预览
+
+### 主界面
+![PaperPilot Interface](https://github.com/user-attachments/assets/13a0d564-ac59-43f2-80dd-bfe06662bd5d)
+
+### 搜索结果展示
+![Search Results](https://github.com/user-attachments/assets/83790012-dff2-4c65-ad41-74f1de1c2fc4)
+
 ## 功能特性
 
 - 📄 **多 PDF 支持**: 可同时加载和搜索多个 PDF 文件
