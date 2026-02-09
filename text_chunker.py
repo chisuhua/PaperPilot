@@ -1,4 +1,5 @@
 """
+<<<<<<< HEAD
 Text Chunker Module
 将文本分割成固定长度的块，支持重叠
 """
@@ -44,6 +45,43 @@ class TextChunker:
         """
         if not text or not text.strip():
             logger.warning("Empty text provided to chunker")
+=======
+Text chunking module with overlap strategy.
+Splits text into fixed-length chunks with configurable overlap.
+"""
+
+from typing import List
+
+
+class TextChunker:
+    """Split text into overlapping chunks."""
+    
+    def __init__(self, chunk_size: int = 512, overlap: int = 50):
+        """
+        Initialize text chunker.
+        
+        Args:
+            chunk_size: Size of each chunk in characters
+            overlap: Number of overlapping characters between chunks
+        """
+        self.chunk_size = chunk_size
+        self.overlap = overlap
+        
+        if overlap >= chunk_size:
+            raise ValueError("Overlap must be smaller than chunk size")
+    
+    def chunk_text(self, text: str) -> List[str]:
+        """
+        Split text into overlapping chunks.
+        
+        Args:
+            text: Input text to chunk
+            
+        Returns:
+            List of text chunks
+        """
+        if not text:
+>>>>>>> c82a479
             return []
         
         chunks = []
@@ -54,6 +92,7 @@ class TextChunker:
             end = start + self.chunk_size
             chunk = text[start:end]
             
+<<<<<<< HEAD
             # 只添加非空块
             if chunk.strip():
                 chunks.append(chunk)
@@ -145,4 +184,17 @@ class TextChunker:
                 chunks.append(chunk)
         
         logger.debug(f"Smart chunked text into {len(chunks)} chunks")
+=======
+            # Only add non-empty chunks
+            if chunk.strip():
+                chunks.append(chunk)
+            
+            # Move start position forward by (chunk_size - overlap)
+            start += self.chunk_size - self.overlap
+            
+            # Break if we've processed all text
+            if end >= text_length:
+                break
+        
+>>>>>>> c82a479
         return chunks

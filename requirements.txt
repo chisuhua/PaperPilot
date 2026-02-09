@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 streamlit==1.31.0
 pymupdf==1.23.8
 sentence-transformers==2.3.1
@@ -5,3 +6,13 @@ chromadb==0.4.22
 torch>=2.6.0
 numpy==1.24.3
 pyyaml==6.0.1
+=======
+# Core dependencies
+pymupdf>=1.23.0
+sentence-transformers>=2.2.0
+chromadb>=0.4.0
+streamlit>=1.28.0
+
+# Additional utilities
+numpy>=1.24.0
+>>>>>>> c82a479
