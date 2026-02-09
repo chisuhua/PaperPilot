@@ -7,6 +7,7 @@ import streamlit as st
 from pathlib import Path
 from paper_manager import PaperManager
 import os
+import tempfile
 
 # Page configuration
 st.set_page_config(
@@ -68,7 +69,7 @@ with st.sidebar:
         if st.button("处理上传的文件"):
             with st.spinner("正在处理PDF文件..."):
                 # Create temporary directory for uploads
-                temp_dir = Path("/tmp/paperpilot_uploads")
+                temp_dir = Path(tempfile.gettempdir()) / "paperpilot_uploads"
                 temp_dir.mkdir(exist_ok=True)
                 
                 paper_ids = []

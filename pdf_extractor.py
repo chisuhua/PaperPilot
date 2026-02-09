@@ -53,7 +53,7 @@ class PDFExtractor:
                 date_str = metadata['creationDate']
                 if date_str.startswith('D:') and len(date_str) >= 6:
                     year = date_str[2:6]
-            except:
+            except (ValueError, IndexError, TypeError):
                 pass
         
         return {
