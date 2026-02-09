@@ -2,6 +2,17 @@
 
 一个基于自然语言处理的 PDF 论文智能搜索系统，支持使用自然语言查询本地 PDF 文档内容。
 
+## 🔔 重要更新
+
+**架构分析完成**：我们对当前实现和 PLAN.md 建议架构进行了全面对比分析。
+
+📖 **查看分析结果**：
+- **[RECOMMENDATION.md](RECOMMENDATION.md)** - 核心结论和建议（推荐先读）
+- **[ARCHITECTURE_COMPARISON.md](ARCHITECTURE_COMPARISON.md)** - 详细技术对比
+- **[MIGRATION_GUIDE.md](MIGRATION_GUIDE.md)** - 迁移实施指南
+
+**结论**：⭐⭐⭐⭐⭐ 强烈推荐采用 PLAN.md 架构作为最终实现方向。
+
 ## 界面预览
 
 ### 主界面
@@ -124,6 +135,13 @@ PaperPilot/
 - 首次运行时会自动下载语言模型，可能需要一些时间
 - 建议使用 PDF 文本版文件（而非扫描版）以获得更好的效果
 - 处理大量 PDF 文件时可能需要较长时间
+
+## 架构文档
+
+- **[RECOMMENDATION.md](RECOMMENDATION.md)** - 架构选择建议
+- **[ARCHITECTURE_COMPARISON.md](ARCHITECTURE_COMPARISON.md)** - 详细技术对比分析
+- **[MIGRATION_GUIDE.md](MIGRATION_GUIDE.md)** - 架构迁移实施指南
+- **[PLAN.md](PLAN.md)** - 完整开发计划（分阶段）
 
 ## License
 
