@@ -209,3 +209,11 @@ __marimo__/
 # Test files
 test_*.py
 create_sample_pdf.py
+
+# PaperPilot specific
+chroma_db/
+models/
+*.log
+paperpilot.log
+app_v1.py
+*_v1.py

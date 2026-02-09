@@ -1,0 +1,41 @@
+# PaperPilot Configuration
+
+# 嵌入模型配置
+model:
+  name: "BAAI/bge-m3"  # 使用 SOTA 多语言模型
+  cache_dir: "./models"  # 模型缓存目录
+
+# 文本分块配置
+chunking:
+  chunk_size: 512  # 每个块的字符数
+  overlap: 50  # 块之间的重叠字符数
+  smart_chunking: true  # 是否尝试在句子边界分割
+
+# ChromaDB 配置
+chromadb:
+  persist_directory: "./chroma_db"  # 数据持久化目录
+  collection_name: "papers"  # 集合名称
+  
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "paperpilot.log"  # 日志文件路径
+  console: true  # 是否输出到控制台
+
+# Streamlit UI 配置
+ui:
+  page_title: "PaperPilot - PDF 论文智能搜索"
+  page_icon: "📚"
+  layout: "wide"  # wide 或 centered
+  default_top_k: 5  # 默认返回结果数
+  max_top_k: 20  # 最大返回结果数
+
+# PDF 处理配置
+pdf:
+  preserve_layout: false  # 是否保留 PDF 原始布局
+  max_file_size_mb: 50  # 单个 PDF 文件最大大小（MB）
+
+# 搜索配置
+search:
+  default_filters: {}  # 默认搜索过滤器
+  enable_metadata_search: true  # 是否启用元数据搜索
