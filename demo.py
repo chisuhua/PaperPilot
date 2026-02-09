@@ -50,7 +50,8 @@ def main() -> None:
         print("  streamlit run app.py")
     else:
         print(f"   ✗ 未找到示例 PDF: {pdf_path}")
-        print("   请先在该路径下放置一个名为 sample_paper.pdf 的示例 PDF 文件后重试。")
+        print(f"   提示：请在路径 {pdf_path} 放置一个示例 PDF 文件")
+        print(f"   或者创建测试目录：mkdir -p /tmp/test_pdfs")
 
     print("\n" + "=" * 80)
 

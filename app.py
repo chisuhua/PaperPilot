@@ -6,7 +6,6 @@ import streamlit as st
 import tempfile
 import os
 import uuid
-import shutil
 from pdf_processor import PDFProcessor
 from search_engine import SemanticSearchEngine
 
