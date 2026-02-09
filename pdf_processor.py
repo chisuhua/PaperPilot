@@ -33,6 +33,7 @@ class PDFProcessor:
                 return text
         except Exception as e:
             print(f"Error reading PDF {pdf_path}: {e}")
+            print(f"Please verify the PDF is not corrupted, password-protected, or inaccessible.")
             return ""
     
     def split_into_paragraphs(self, text: str, min_length: int = 50) -> List[str]:
