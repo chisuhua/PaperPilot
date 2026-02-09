@@ -3,7 +3,7 @@ PDF Processor Module
 处理 PDF 文件，提取文本内容和段落
 """
 import os
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Any
 import PyPDF2
 import re
 
@@ -60,7 +60,7 @@ class PDFProcessor:
         
         return cleaned_paragraphs
     
-    def process_pdf(self, pdf_path: str) -> Dict[str, any]:
+    def process_pdf(self, pdf_path: str) -> Dict[str, Any]:
         """
         处理单个 PDF 文件
         
@@ -84,7 +84,7 @@ class PDFProcessor:
         self.documents[filename] = doc_info
         return doc_info
     
-    def process_multiple_pdfs(self, pdf_paths: List[str]) -> List[Dict[str, any]]:
+    def process_multiple_pdfs(self, pdf_paths: List[str]) -> List[Dict[str, Any]]:
         """
         处理多个 PDF 文件
         

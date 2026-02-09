@@ -2,7 +2,7 @@
 Search Engine Module
 使用语义搜索技术实现自然语言搜索功能
 """
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Any
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -46,7 +46,7 @@ class SemanticSearchEngine:
         self.embeddings = self.model.encode(paragraph_texts, show_progress_bar=True)
         print("Indexing completed!")
     
-    def search(self, query: str, top_k: int = 5) -> List[Dict[str, any]]:
+    def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         """
         执行语义搜索
         
@@ -84,7 +84,7 @@ class SemanticSearchEngine:
         return results
     
     def search_with_threshold(self, query: str, threshold: float = 0.3, 
-                             max_results: int = 10) -> List[Dict[str, any]]:
+                             max_results: int = 10) -> List[Dict[str, Any]]:
         """
         执行语义搜索，只返回相似度高于阈值的结果
         
