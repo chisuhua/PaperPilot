@@ -1,0 +1,41 @@
+.
+|-- .github
+|   `-- copilot-instructions.md
+|-- .gitignore
+|-- LICENSE
+|-- MANIFEST.in
+|-- QUICKSTART.md
+|-- README.md
+|-- REORGANIZATION.md
+|-- config.yaml
+|-- docs
+|   |-- ARCHITECTURE_COMPARISON.md
+|   |-- MIGRATION_GUIDE.md
+|   |-- PLAN.md
+|   |-- RECOMMENDATION.md
+|   `-- USAGE.md
+|-- examples
+|   |-- demo.py
+|   `-- example.py
+|-- paperpilot
+|   |-- __init__.py
+|   |-- core
+|   |   |-- __init__.py
+|   |   |-- paper_manager.py
+|   |   |-- pdf_extractor.py
+|   |   |-- search_engine.py
+|   |   |-- text_chunker.py
+|   |   `-- vector_store.py
+|   `-- ui
+|       |-- __init__.py
+|       |-- app.py
+|       `-- app_demo.py
+|-- project_structure.txt
+|-- requirements.txt
+|-- setup.py
+|-- tests
+|   |-- create_test_pdf.py
+|   `-- test_components.py
+`-- verify_structure.py
+
+8 directories, 31 files
