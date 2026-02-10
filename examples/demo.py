@@ -12,11 +12,11 @@ def main() -> None:
     print("=" * 80)
 
     print("\n1. 导入模块...")
-    from pdf_processor import PDFProcessor
+    from paperpilot.core import PDFExtractor
     print("   ✓ PDF 处理模块已加载")
 
     print("\n2. 初始化 PDF 处理器...")
-    processor = PDFProcessor()
+    processor = PDFExtractor()
     print("   ✓ 处理器初始化完成")
 
     print("\n3. 处理示例 PDF 文件...")

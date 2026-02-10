@@ -3,7 +3,7 @@ Example usage of PaperPilot system.
 Demonstrates basic functionality without the web interface.
 """
 
-from paper_manager import PaperManager
+from paperpilot.core import PaperManager
 from pathlib import Path
 
 

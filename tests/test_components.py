@@ -46,28 +46,28 @@ def test_modules():
     print("\nTesting PaperPilot modules...")
     
     try:
-        from pdf_extractor import PDFExtractor
+        from paperpilot.core import PDFExtractor
         print("  ✓ pdf_extractor module")
     except ImportError as e:
         print(f"  ✗ pdf_extractor import failed: {e}")
         return False
     
     try:
-        from text_chunker import TextChunker
+        from paperpilot.core import TextChunker
         print("  ✓ text_chunker module")
     except ImportError as e:
         print(f"  ✗ text_chunker import failed: {e}")
         return False
     
     try:
-        from vector_store import VectorStore
+        from paperpilot.core import VectorStore
         print("  ✓ vector_store module")
     except ImportError as e:
         print(f"  ✗ vector_store import failed: {e}")
         return False
     
     try:
-        from paper_manager import PaperManager
+        from paperpilot.core import PaperManager
         print("  ✓ paper_manager module")
     except ImportError as e:
         print(f"  ✗ paper_manager import failed: {e}")
@@ -81,7 +81,7 @@ def test_text_chunker():
     print("\nTesting text chunking...")
     
     try:
-        from text_chunker import TextChunker
+        from paperpilot.core import TextChunker
         
         chunker = TextChunker(chunk_size=100, overlap=20)
         text = "This is a test sentence. " * 20
@@ -110,7 +110,7 @@ def test_pdf_extraction():
         return True  # Not a failure, just skipped
     
     try:
-        from pdf_extractor import PDFExtractor
+        from paperpilot.core import PDFExtractor
         
         with PDFExtractor(str(test_pdf)) as extractor:
             text = extractor.extract_text()
