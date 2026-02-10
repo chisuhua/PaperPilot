@@ -7,14 +7,20 @@ A local, open-source paper management system with semantic search capabilities.
 __version__ = "1.0.0"
 __author__ = "PaperPilot Contributors"
 
-from .paper_manager import PaperManager
-from .pdf_extractor import PDFExtractor
-from .text_chunker import TextChunker
-from .vector_store import VectorStore
+from .core import (
+    PaperManager,
+    PDFExtractor,
+    TextChunker,
+    VectorStore,
+    SearchEngine,
+    PDFExtractionError,
+)
 
 __all__ = [
     "PaperManager",
-    "PDFExtractor", 
+    "PDFExtractor",
     "TextChunker",
     "VectorStore",
+    "SearchEngine",
+    "PDFExtractionError",
 ]
