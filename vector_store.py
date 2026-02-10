@@ -1,5 +1,6 @@
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 Vector Store Module
 ChromaDB 向量数据库封装
 """
@@ -226,6 +227,8 @@ class VectorStore:
         )
         logger.info("Collection reset complete")
 =======
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
 Vector storage and semantic search using ChromaDB and sentence-transformers.
 Handles document embedding and similarity search.
 """
@@ -337,4 +340,7 @@ class VectorStore:
             name=self.collection.name,
             metadata={"hnsw:space": "cosine"}
         )
+<<<<<<< HEAD
 >>>>>>> c82a479
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2

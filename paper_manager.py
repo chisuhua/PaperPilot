@@ -1,5 +1,6 @@
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 Paper Manager Module
 高层 API，整合 PDF 提取、分块和向量存储
 """
@@ -239,6 +240,8 @@ class PaperManager:
         logger.warning("Resetting PaperManager - all data will be deleted")
         self.vector_store.reset()
 =======
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
 Main paper management system that integrates all components.
 """
 
@@ -393,4 +396,7 @@ class PaperManager:
             'total_chunks': collection_info['count'],
             'papers': list(self.papers.values())
         }
+<<<<<<< HEAD
 >>>>>>> c82a479
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2

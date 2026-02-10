@@ -1,5 +1,6 @@
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 PDF Extractor Module
 使用 pymupdf 提取 PDF 文本和元数据
 """
@@ -185,6 +186,8 @@ class PDFExtractionError(Exception):
     """PDF 提取错误"""
     pass
 =======
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
 PDF text extraction module using PyMuPDF (fitz).
 Extracts text and metadata from PDF files.
 """
@@ -263,4 +266,7 @@ class PDFExtractor:
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Context manager exit."""
         self.close()
+<<<<<<< HEAD
 >>>>>>> c82a479
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2

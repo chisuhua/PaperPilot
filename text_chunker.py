@@ -1,5 +1,6 @@
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 Text Chunker Module
 将文本分割成固定长度的块，支持重叠
 """
@@ -46,6 +47,8 @@ class TextChunker:
         if not text or not text.strip():
             logger.warning("Empty text provided to chunker")
 =======
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
 Text chunking module with overlap strategy.
 Splits text into fixed-length chunks with configurable overlap.
 """
@@ -81,7 +84,10 @@ class TextChunker:
             List of text chunks
         """
         if not text:
+<<<<<<< HEAD
 >>>>>>> c82a479
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
             return []
         
         chunks = []
@@ -92,6 +98,7 @@ class TextChunker:
             end = start + self.chunk_size
             chunk = text[start:end]
             
+<<<<<<< HEAD
 <<<<<<< HEAD
             # 只添加非空块
             if chunk.strip():
@@ -185,6 +192,8 @@ class TextChunker:
         
         logger.debug(f"Smart chunked text into {len(chunks)} chunks")
 =======
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
             # Only add non-empty chunks
             if chunk.strip():
                 chunks.append(chunk)
@@ -196,5 +205,8 @@ class TextChunker:
             if end >= text_length:
                 break
         
+<<<<<<< HEAD
 >>>>>>> c82a479
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
         return chunks

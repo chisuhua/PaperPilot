@@ -1,5 +1,6 @@
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 PaperPilot - PDF 论文智能搜索系统 (V2)
 基于 PLAN.md 架构：pymupdf + bge-m3 + ChromaDB
 """
@@ -294,6 +295,8 @@ def show_usage_guide():
 if __name__ == "__main__":
     main()
 =======
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
 Streamlit web interface for PaperPilot.
 Provides an interactive UI for paper management and semantic search.
 """
@@ -491,4 +494,7 @@ st.markdown("""
     PaperPilot - 开源本地论文管理系统 | 技术栈: PyMuPDF + BAAI/bge-m3 + ChromaDB + Streamlit
 </div>
 """, unsafe_allow_html=True)
+<<<<<<< HEAD
 >>>>>>> c82a479
+=======
+>>>>>>> c82a479dad18df57429f18f3673a14377b64e1d2
